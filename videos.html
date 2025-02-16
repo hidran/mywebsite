@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Videos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-y5IRpXJmB4CR5y5QU0rFfCjUPO0z8U2T9mN9xQ5Py0X5K5Q5P5z5" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>Videos</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="https://picsum.photos/200/300" alt="Thumbnail" id="thumbnail-1" onclick="playVideo('iframe-1')">
+                <div class="card-body">
+                    <p class="card-text">Video 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="https://picsum.photos/200/301" alt="Thumbnail" id="thumbnail-2" onclick="playVideo('iframe-2')">
+                <div class="card-body">
+                    <p class="card-text">Video 2</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="https://picsum.photos/200/302" alt="Thumbnail" id="thumbnail-3" onclick="playVideo('iframe-3')">
+                <div class="card-body">
+                    <p class="card-text">Video 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <iframe id="iframe-1" width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <iframe id="iframe-2" width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <iframe id="iframe-3" width="100%" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<script>
+    function playVideo(id) {
+        document.getElementById(id).src += "&autoplay=1";
+    }
+</script>
+</body>
+</html>
